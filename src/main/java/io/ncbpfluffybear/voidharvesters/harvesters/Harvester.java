@@ -311,7 +311,7 @@ public abstract class Harvester extends SlimefunItem implements EnergyNetCompone
         }
 
         if (fuel > 0) {
-            fuelStatus = "&aFuel: " + fuel;
+            fuelStatus = "&a燃料: " + fuel;
         }
 
 

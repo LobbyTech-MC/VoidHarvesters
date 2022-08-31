@@ -22,7 +22,7 @@ public class WoodcutterHarvester extends Harvester {
 
     @Override
     public void run(Block b, BlockMenu menu, BlockFace facing, Map<Upgrade.UpgradeType, Integer> upgrades) {
-        for (int i = 0; i <= upgrades.get(Upgrade.UpgradeType.RANGE); i++) {
+        for (int i = 0; i <= upgrades.get(Upgrade.UpgradeType.RANGE_WOODCUTTER); i++) {
             Block toCheck = b.getRelative(facing, i + 1);
             if (!isSFBlock(toCheck) && validateBlock(toCheck)) {
                 for (ItemStack item : toCheck.getDrops()) {

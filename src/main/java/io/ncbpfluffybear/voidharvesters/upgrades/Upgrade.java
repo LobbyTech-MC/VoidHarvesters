@@ -76,7 +76,7 @@ public class Upgrade extends SimpleSlimefunItem<ItemUseHandler> {
         // Check level limit
         int level = getLevel(b, key);
         if (level >= upgrade.getMaxLvl()) {
-            Utils.send(p, "&cYou have reached the max level for this upgrade");
+            Utils.send(p, "&c此模块已经升到了最高等级");
             return false;
         }
 
@@ -119,7 +119,7 @@ public class Upgrade extends SimpleSlimefunItem<ItemUseHandler> {
                 SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.NETHERITE_HOE), SlimefunItems.REINFORCED_ALLOY_INGOT,
                 SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.POWER_CRYSTAL, SlimefunItems.REINFORCED_ALLOY_INGOT,
                 SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.ADVANCED_CIRCUIT_BOARD, SlimefunItems.REINFORCED_ALLOY_INGOT
-        }, "&7增加收割机的范围");
+        }, "&7增加收割机的范围"), ;
 
         
         private final int maxLvl;
@@ -132,9 +132,9 @@ public class Upgrade extends SimpleSlimefunItem<ItemUseHandler> {
             this.acceptableHarvesters = acceptableHarvesters;
             this.recipe = recipe;
             this.lore = lore;
-        }
+        } 
 
-        public String getName() {
+		public String getName() {
             return this.name().toLowerCase();
         }
 

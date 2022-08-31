@@ -33,8 +33,8 @@ public class FarmerHarvester extends Harvester implements Listener {
     @Override
     public void run(Block b, BlockMenu menu, BlockFace facing, Map<Upgrade.UpgradeType, Integer> upgrades) {
 
-        for (int x = -upgrades.get(Upgrade.UpgradeType.RANGE); x < upgrades.get(Upgrade.UpgradeType.RANGE); x++) {
-            for (int y = -upgrades.get(Upgrade.UpgradeType.RANGE); y < upgrades.get(Upgrade.UpgradeType.RANGE); y++) {
+        for (int x = -upgrades.get(Upgrade.UpgradeType.RANGE_FARMER); x < upgrades.get(Upgrade.UpgradeType.RANGE_FARMER); x++) {
+            for (int y = -upgrades.get(Upgrade.UpgradeType.RANGE_FARMER); y < upgrades.get(Upgrade.UpgradeType.RANGE_FARMER); y++) {
                 Block toCheck = b.getRelative(x, 0, y);
                 if(isSFBlock(toCheck)) {
                     continue;
