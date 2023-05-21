@@ -25,7 +25,6 @@ import io.ncbpfluffybear.voidharvesters.tasks.InitializeTask;
 import io.ncbpfluffybear.voidharvesters.tasks.SaveTask;
 import net.guizhanss.guizhanlibplugin.updater.GuizhanBuildsUpdaterWrapper;
 
-@SuppressWarnings("ConstantConditions")
 public class VoidHarvesters extends JavaPlugin implements SlimefunAddon {
 
     private static VoidHarvesters instance;
@@ -36,7 +35,8 @@ public class VoidHarvesters extends JavaPlugin implements SlimefunAddon {
     private BukkitTask harvesterTask;
     private BukkitTask saveTask;
 
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public void onEnable() {
         instance = this;
 
