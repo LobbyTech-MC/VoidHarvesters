@@ -1,19 +1,19 @@
 package io.ncbpfluffybear.voidharvesters;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.ncbpfluffybear.voidharvesters.enums.HarvesterType;
-import io.ncbpfluffybear.voidharvesters.harvesters.Harvester;
-import io.ncbpfluffybear.voidharvesters.harvesters.MinerHarvester;
-import io.ncbpfluffybear.voidharvesters.harvesters.WoodcutterHarvester;
-import io.ncbpfluffybear.voidharvesters.harvesters.FarmerHarvester;
-import io.ncbpfluffybear.voidharvesters.upgrades.Upgrade;
-import org.apache.commons.lang.WordUtils;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.libraries.commons.lang.WordUtils;
+import io.ncbpfluffybear.voidharvesters.enums.HarvesterType;
+import io.ncbpfluffybear.voidharvesters.harvesters.FarmerHarvester;
+import io.ncbpfluffybear.voidharvesters.harvesters.MinerHarvester;
+import io.ncbpfluffybear.voidharvesters.harvesters.WoodcutterHarvester;
+import io.ncbpfluffybear.voidharvesters.upgrades.Upgrade;
 
 public final class VHItemSetup {
 

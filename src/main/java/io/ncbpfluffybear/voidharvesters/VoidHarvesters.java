@@ -1,5 +1,20 @@
 package io.ncbpfluffybear.voidharvesters;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.text.MessageFormat;
+import java.util.HashMap;
+import java.util.logging.Level;
+
+import javax.annotation.Nonnull;
+
+import org.bukkit.Material;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.block.Block;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitTask;
+
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.ncbpfluffybear.voidharvesters.data.PlayerData;
@@ -8,21 +23,7 @@ import io.ncbpfluffybear.voidharvesters.harvesters.Harvester;
 import io.ncbpfluffybear.voidharvesters.tasks.HarvesterTask;
 import io.ncbpfluffybear.voidharvesters.tasks.InitializeTask;
 import io.ncbpfluffybear.voidharvesters.tasks.SaveTask;
-import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
-import org.bukkit.Material;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitTask;
-
-import javax.annotation.Nonnull;
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.text.MessageFormat;
-import java.util.HashMap;
-import java.util.logging.Level;
+import net.guizhanss.guizhanlibplugin.updater.GuizhanBuildsUpdaterWrapper;
 
 @SuppressWarnings("ConstantConditions")
 public class VoidHarvesters extends JavaPlugin implements SlimefunAddon {
@@ -68,7 +69,7 @@ public class VoidHarvesters extends JavaPlugin implements SlimefunAddon {
         fuelSourcesConfig = new Config(this, "fuel-sources.yml");
 
         if (cfg.getBoolean("options.auto-update")) {
-            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "VoidHarvesters", "main", false).start();
+            GuizhanBuildsUpdaterWrapper.start(this, getFile(), "SlimefunGuguProject", "VoidHarvesters", "main", false);
         }
 
         VoidHarvesterCommand vhc = new VoidHarvesterCommand();

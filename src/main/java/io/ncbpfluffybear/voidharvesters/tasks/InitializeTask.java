@@ -1,16 +1,15 @@
 package io.ncbpfluffybear.voidharvesters.tasks;
 
-import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
-import io.ncbpfluffybear.voidharvesters.enums.HarvesterType;
-import io.ncbpfluffybear.voidharvesters.VoidHarvesters;
-import io.ncbpfluffybear.voidharvesters.harvesters.Harvester;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
+import java.util.UUID;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.entity.Player;
 
-import java.util.HashSet;
-import java.util.UUID;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
+import io.ncbpfluffybear.voidharvesters.VoidHarvesters;
+import io.ncbpfluffybear.voidharvesters.enums.HarvesterType;
+import io.ncbpfluffybear.voidharvesters.harvesters.Harvester;
+import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
 public class InitializeTask implements Runnable {
     @Override

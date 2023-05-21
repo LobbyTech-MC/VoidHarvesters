@@ -1,14 +1,13 @@
 package io.ncbpfluffybear.voidharvesters.data;
 
-import io.ncbpfluffybear.voidharvesters.enums.HarvesterType;
-import io.ncbpfluffybear.voidharvesters.harvesters.Harvester;
-import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
+import org.bukkit.block.Block;
+
+import io.ncbpfluffybear.voidharvesters.enums.HarvesterType;
 
 /**
  * The harvesters and their blocks that a player owns
